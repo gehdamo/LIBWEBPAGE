@@ -1,0 +1,87 @@
+    /*책 위치 전체 스타일*/
+    #BOOKplace{
+
+        /*text-align: center;*/
+        margin-top: 500px;
+  
+        display: flex;
+        flex-direction: column;
+        /*margin-left: 42vw*/
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100vw;
+  
+      }
+      .BOOKplaceInput{
+        font-size: 20px;
+        /*text-align: center;*/
+        margin-top: 20px;
+  
+  
+      }
+
+      /*input 태그들 스타일*/
+      .BOOKplaceInput > input{
+        font-size: 40px;
+      }
+
+      /*검색 버튼 스타일*/
+      #input-BOOKsearch{
+        background-color: #3c3c3c;
+  
+        border: none;
+        color: white;
+        padding-left: 5.7vw;
+        padding-right: 5.7vw;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /*검색 버튼 마우스 올렸을 때*/
+      #input-BOOKsearch:hover{
+        background-color: #282828;
+      }
+  
+  
+      #BOOKplace > label{
+        font-size: 40px;
+      }
+
+
+      /*대출불가 여부 문구 스타일*/
+
+    input[id="input-BOOKcheck"] + label {
+		display: inline-block;
+        padding-left: 2.4vw;
+        padding-right: 2.4vw;
+        padding-top: 1.0vh;
+        padding-bottom: 1.0vh;
+		border: 2px solid #3c3c3c;
+		cursor: pointer;
+        font-size: 30px;
+		}
+
+	input[id="input-BOOKcheck"]:checked + label {
+		background-color: #3c3c3c;
+        color:white;
+    }
+
+    input[id="input-BOOKcheck"] {
+		display: none;
+	}
+
+
+
+
+      /*대출불가 여부 체크 박스 스타일*/
+      #input-BOOKcheck{
+        display: none;
+        
+      }
+
+      
+
+      #img-BOOKplace{
+        align-self: auto;
+      }

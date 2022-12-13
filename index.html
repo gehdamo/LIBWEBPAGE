@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>New_도서관 홈페이지</title>
-    <style>
-    #TITLEtext{
-      color:black;
 
-    }
+    <!--버튼 CSS파일 로드-->
+    <link rel="stylesheet" type="text/css" href="button.css">
+
+    <!--책 위치 CSS파일 로드-->
+    <link rel="stylesheet" type="text/css" href="bookPlace.css">
+
+
+    <style>
+
     .clock{
       font-size: 100px;
       text-align: center;
@@ -25,25 +30,12 @@
 
 
     }
-
-    .BUTTONA{
-
-      text-align: center;
-      margin-right: 30px;
-      vertical-align: middle;
-      padding: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-size: 20px;
-      color:white;
+    #TITLEtext{
+      color:black;
 
     }
-    .BUTTONA:hover{
-
-      background-color: #282828;
 
 
-    }
     .MENU{
       text-align: right;
       width: 100vw;
@@ -56,55 +48,17 @@
 
 
 
-    #BOOKplace{
-
-      /*text-align: center;*/
-      margin-top: 500px;
-
-      display: flex;
-      flex-direction: column;
-      /*margin-left: 42vw*/
-      flex-wrap: nowrap;
-      text-align: center;
-      width: 100vw;
-
-    }
-    .BOOKplaceInput{
-      font-size: 20px;
-      /*text-align: center;*/
-      margin-top: 20px;
-
-
-    }
-    .BOOKplaceInput > input{
-      font-size: 40px;
-    }
-    #input-BOOKsearch{
-background-color: #3c3c3c;
-
-border: none;
-color: white;
-padding-left: 5.2%;
-padding-right: 5.2%;
-text-align: center;
-text-decoration: none;
-cursor: pointer;
-    }
-    #input-BOOKsearch:hover{
-      background-color: #282828;
-    }
-
-
-    #BOOKplace > label{
-      font-size: 40px;
-    }
-
-
-
 
     a{
           text-decoration: none;
     }
+
+
+
+
+
+
+
 
     </style>
     <script src="bookPlace.js">
@@ -150,27 +104,47 @@ cursor: pointer;
 
 
   <!--도서 위치 기능-->
-
+<!--도서 위치 검색 부모 클래스 div-->
 <div id="BOOKplace">
 <label for="BOOKplaceInput">도서 위치 검색</label>
 
-
+<!--책 연도 창-->
 <div class="BOOKplaceInput">
 <input id="input-YEAR" type="text" value="" placeholder="책 출간 연도" maxlength="4" size=9>
 </div>
 
 
+<!--청구기호 창-->
 <div class="BOOKplaceInput">
 <input id="input-BOOKnumber" type="text" value="" placeholder="책 청구기호" size=9>
 </div>
 
+
+<!--대출불가 여부 체크박스-->
+<div class="BOOKplaceInput">
+
+<!--진짜 체크박스-->
+<input id="input-BOOKcheck" type="checkbox">
+
+<!--라벨을 이용해 가짜 체크박스-->
+<label for="input-BOOKcheck">대출불가 여부</label>
+</div>
+
+<!--검색 버튼-->
 <div class="BOOKplaceInput">
 <input type="button" id="input-BOOKsearch" value="검색" onclick="
 let Year = document.querySelector('#input-YEAR').value;
 let Number = document.querySelector('#input-BOOKnumber').value;
-startBOOKsearch(Year, Number);
-console.log(Year, Number);
+let Enable = document.querySelector('#input-BOOKcheck');
+
+startBOOKsearch(Year, Number, Enable.checked);
+console.log(Year, Number, Enable.checked);
 ">
+</div>
+
+
+<!--이미지 불러오기-->
+<div class="BOOKplaceInput" id = "img-BOOKplace">
 </div>
 
 

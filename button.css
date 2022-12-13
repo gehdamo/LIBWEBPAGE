@@ -1,0 +1,18 @@
+.BUTTONA{
+
+    text-align: center;
+    margin-right: 30px;
+    vertical-align: middle;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color:white;
+
+  }
+  .BUTTONA:hover{
+
+    background-color: #282828;
+
+
+  }
